@@ -1,0 +1,101 @@
+/* ===============================
+   🖥️ Main Checkout Page Container
+================================= */
+.screen-CheckoutPage {
+  margin-top: 8%;
+}
+
+/* ===============================
+   🧾 Checkout Card Container
+================================= */
+.checkout-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* ===============================
+   🏷️ Page Title
+================================= */
+.checkout-title {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* ===============================
+   📄 Form Structure
+================================= */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===============================
+   🧱 Form Group Block
+================================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+/* ===============================
+   ✏️ Input & Textarea Fields
+================================= */
+.form-group input,
+.form-group textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #888;
+  outline: none;
+  background-color: #fff;
+}
+
+/* ===============================
+   ✅ Checkout Button
+================================= */
+.checkout-btn {
+  padding: 0.75rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #222;
+}
+
+/* ===============================
+   ❗ Error Text
+================================= */
+.error-text {
+  color: #e63946;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}

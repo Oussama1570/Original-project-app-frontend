@@ -1,0 +1,342 @@
+/* ===============================
+   🌐 Navbar Container & Content
+================================= */
+.navbar-container {
+  width: 100%;
+  padding: 12px 20px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #b5d0f5;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   🔰 Logo
+================================= */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* ===============================
+   📁 Navigation Links
+================================= */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+/* ✨ Hover underline effect */
+.nav-links li a:hover,
+.nav-links li a:focus {
+  background: transparent !important;
+  color: #e0e0e0 !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease-in-out;
+}
+
+/* ===============================
+   🛍️ Icons (Cart & User)
+================================= */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.nav-icons a {
+  color: #4b5563;
+  text-decoration: none;
+  transition: transform 0.2s, color 0.2s;
+}
+
+/* 👤 User/Login Icon Cleanup */
+.user-avatar-btn,
+.login-icon {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.user-icon,
+.login-icon .icon {
+  background: none !important;
+  color: #4b5563;
+  font-size: 1.4rem;
+  pointer-events: none;
+}
+
+/* 🧼 Remove hover/focus background from logged-in user icon */
+.user-avatar-btn:hover,
+.user-avatar-btn:focus,
+.user-avatar-btn:active {
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===============================
+   📱 Mobile Responsive Behavior
+================================= */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav-links.mobile-center.open {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    width: 100%;
+    background: transparent !important;
+  }
+
+  .nav-links li a {
+    background: transparent !important;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a:focus,
+  .nav-links li a:active {
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none;
+    color: #e0e0e0 !important;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .nav-icons {
+    margin-top: 10px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+
+/* Show nav links on desktop */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .mobile-menu-panel {
+    display: none;
+  }
+}
+
+/* ===============================
+   📱 Mobile Menu Toggle Button
+================================= */
+.mobile-menu-btn {
+  display: none;
+  background: none !important;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 8px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-menu-btn .menu-icon {
+  background: none !important;
+  color: #1f2937;
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+
+/* ===============================
+   🧭 Mobile Menu Panel
+================================= */
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #b5d0f5;
+  padding: 2rem 1.5rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-panel ul {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu-panel ul li a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu-panel ul li a:hover {
+  color: #4b5563;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ===============================
+   ❌ Close Button for Mobile Menu
+================================= */
+.close-btn {
+  align-self: flex-end;
+  background: transparent !important;
+  border: none;
+  font-size: 1.8rem;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 8px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.close-btn:hover,
+.close-btn:focus,
+.close-btn:active {
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #1f2937;
+}
+
+/* ===============================
+   ⬇️ Dropdown Animation
+================================= */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes dropdownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   👤 User Dropdown Menu
+================================= */
+.user-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  background-color: #b5d0f5;
+  border: 1px solid #cce4f6;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  width: 180px;
+  z-index: 1001;
+  animation: dropdownFade 0.2s ease-in-out;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-dropdown ul li {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.user-dropdown ul li a,
+.user-dropdown ul li button {
+  text-decoration: none;
+  color: #ffffff;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.user-dropdown ul li:hover {
+  background-color: #d0eaff;
+}

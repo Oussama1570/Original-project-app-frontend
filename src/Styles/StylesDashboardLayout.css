@@ -1,0 +1,171 @@
+/* ===================== 🧭 Layout Structure ===================== */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb; /* Light background for the dashboard */
+}
+
+.Dashboard-Title {
+  padding-left: 2.5%;
+}
+
+/* ===================== 📚 Sidebar ===================== */
+.sidebar {
+  width: 60px;
+  background-color: #4a8654; /* Slate-800: Dark sidebar background */
+  color: #f1f5f9;             /* Light icon text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 30;
+  transition: transform 0.3s ease;
+}
+
+.sidebar a,
+.sidebar button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;             /* Slate-300 */
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+  background-color: #334155; /* Slate-700 */
+  color: #ffffff;
+}
+
+.sidebar a.active {
+  background-color: #3b82f6; /* Sky-500 for active */
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background-color: #ef4444; /* Red-500 for logout */
+  margin-top: auto;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626; /* Red-600 on hover */
+}
+
+/* ===================== 📱 Mobile Toggle ===================== */
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #2e3a59;
+  color: white;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 50;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+  }
+}
+
+/* ===================== 🔝 Header ===================== */
+.dashboard-header {
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+/* ===================== 🎛️ Header Buttons ===================== */
+.dashboard-header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-blue {
+  background-color: #3b82f6;
+}
+
+.btn-blue:hover {
+  background-color: #2563eb;
+}
+
+.btn-green {
+  background-color: #10b981;
+}
+
+.btn-green:hover {
+  background-color: #059669;
+}
+
+.btn-red {
+  background-color: #ef4444;
+}
+
+.btn-red:hover {
+  background-color: #dc2626;
+}
+
+/* ===================== 🧾 Main Content ===================== */
+.dashboard-content {
+  flex: 1;
+  padding: 1.5rem;
+  margin-left: 60px; /* Matches sidebar width */
+  overflow-y: auto;
+  box-sizing: border-box;
+}

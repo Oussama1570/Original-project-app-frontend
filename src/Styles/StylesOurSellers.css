@@ -1,0 +1,120 @@
+/* ===============================
+   🛍️ Our Sellers Main Section
+================================= */
+.our-sellers {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* ===============================
+   🏷️ Section Title
+================================= */
+.our-sellers-title {
+  font-size: 1.6rem;
+  color: #09083f;
+  margin-bottom: 1.5rem;
+}
+
+/* ===============================
+   🗂️ Category Selector
+================================= */
+.category-selector {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.category-btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.category-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.category-btn.active {
+  background-color: #a67c52;
+  color: #fff;
+  border-color: #a67c52;
+}
+
+/* ===============================
+   🎠 Carousel Container & Layout
+================================= */
+.carousel-wrapper {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.carousel-container {
+  padding-bottom: 2rem;
+}
+
+.carousel-item-padding {
+  padding: 0 10px;
+}
+
+/* ===============================
+   🔄 Custom Carousel Arrows
+================================= */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3f3d3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+.custom-arrow:hover {
+  background-color: #1a1715;
+}
+
+.custom-arrow.left {
+  left: 10px;
+}
+
+.custom-arrow.right {
+  right: 10px;
+}
+
+/* ===============================
+   📱 Mobile Responsiveness
+================================= */
+@media (max-width: 768px) {
+  .custom-arrow {
+    display: none;
+  }
+
+  .category-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .our-sellers-title {
+    font-size: 1.4rem;
+  }
+}

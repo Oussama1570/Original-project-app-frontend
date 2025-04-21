@@ -1,0 +1,93 @@
+/* 🌐 Admin Login Page Container */
+.admin-login-page {
+  display: flex;                         /* Center content horizontally */
+  justify-content: center;
+  align-items: center;                   /* Center content vertically */
+  min-height: 100vh;                     /* Full screen height */
+  background: #f8fafc;                   /* Light background */
+  padding: 2rem;                         /* Responsive padding */
+}
+
+/* 📦 Login Box */
+.admin-login-box {
+  background: #ffffff;                   /* White background */
+  padding: 2rem;                         /* Inner spacing */
+  width: 100%;
+  max-width: 400px;                      /* Max width for smaller screens */
+  border-radius: 8px;                    /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  text-align: center;
+}
+
+/* 🧾 Title */
+.admin-login-title {
+  font-size: 1.5rem;                     /* Large title text */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1e293b;                        /* Slate-800 */
+}
+
+/* 📥 Form Container */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;                           /* Space between form items */
+  text-align: left;
+}
+
+/* 🔤 Label Text */
+.admin-login-form label {
+  font-size: 0.9rem;
+  color: #374151;                        /* Slate-700 */
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+/* 🧾 Input Fields */
+.admin-login-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;            /* Gray-300 */
+  font-size: 0.95rem;
+}
+
+/* 🔵 Input Focus State */
+.admin-login-form input:focus {
+  outline: none;
+  border-color: #3b82f6;                /* Blue-500 */
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+/* ❗ Error Message */
+.admin-error {
+  color: #dc2626;                        /* Red-600 */
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* ✅ Submit Button */
+.admin-login-btn {
+  background-color: #3b82f6;            /* Blue-500 */
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 🔄 Hover Effect */
+.admin-login-btn:hover {
+  background-color: #2563eb;            /* Blue-600 */
+}
+
+/* 📄 Footer Text */
+.admin-login-footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #94a3b8;                        /* Slate-400 */
+  text-align: center;
+}

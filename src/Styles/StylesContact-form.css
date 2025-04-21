@@ -1,0 +1,87 @@
+/* ===============================
+   📩 Contact Form Container
+================================= */
+.contact-form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   📄 Form Layout
+================================= */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===============================
+   🏷️ Title & Description
+================================= */
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.contact-description {
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* ===============================
+   ✏️ Input & Textarea Fields
+================================= */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* ===============================
+   📤 Submit Button
+================================= */
+button {
+  padding: 12px;
+  background: #4479c9;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1f0758;
+}
+
+/* ===============================
+   ✅ Success & ❌ Error Messages
+================================= */
+.message-status {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: red;
+}

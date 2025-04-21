@@ -1,0 +1,25 @@
+/* 🎯 Main Wrapper for Manage Orders Page */
+.manage-orders-wrapper {
+  padding: 2rem 1rem;                    /* Responsive vertical and horizontal padding */
+  background-color: #f9f9f9;             /* Light gray background for contrast */
+}
+
+/* 📦 Orders Section Container */
+.orders-section {
+  max-width: 1200px;                     /* Limit the section width */
+  margin: 0 auto 3rem auto;              /* Center horizontally with bottom margin */
+  padding: 2rem;                         /* Internal padding */
+  background-color: #ffffff;             /* White card background */
+  border-radius: 12px;                   /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03); /* Soft shadow for depth */
+  overflow-x: auto;                      /* Horizontal scroll if table overflows */
+}
+
+/* 🧾 Section Title */
+.orders-title {
+  font-size: 1.5rem;                     /* Larger text */
+  font-weight: 600;                      /* Bold title */
+  color: #2e2e2e;                        /* Dark gray text */
+  text-align: center;                    /* Centered title */
+  margin-bottom: 1.5rem;                 /* Space below title */
+}

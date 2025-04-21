@@ -1,0 +1,174 @@
+/* ================================
+   📄 General Screen Wrapper
+================================ */
+.UserDashboard-screen {
+  margin-top: 8%;
+}
+
+/* ================================
+   🧾 Dashboard Page Styling
+================================ */
+.user-dashboard {
+  background-color: #fdfbf9;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* ================================
+   🏷️ Dashboard Headers
+================================ */
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.orders-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ================================
+   📦 Orders Section
+================================ */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-card {
+  background-color: #fafafa;
+  border-left: 4px solid #a67c52;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Header Row in Order Card */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.order-id {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.order-date {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.order-total {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   🛍️ Product Items in Orders
+================================ */
+.order-products-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #5a382d;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #a67c52;
+}
+
+.product-info {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.product-title {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+/* ================================
+   🚫 No Orders Message
+================================ */
+.no-orders {
+  text-align: center;
+  color: #999;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* 🎯 Highlight Utility */
+.highlight {
+  color: #a67c52;
+  font-weight: 600;
+}
+
+/* ================================
+   📱 Responsive Adjustments
+================================ */
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+
+  .product-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+  }
+
+  .product-info {
+    margin-top: 0.5rem;
+  }
+}
